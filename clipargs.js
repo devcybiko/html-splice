@@ -1,5 +1,5 @@
-const assert = require('assert');
 const DEFAULT="_argv";
+const assert = require('assert');
 
 module.exports = clipargs;
 
@@ -21,12 +21,15 @@ function isKey(keys, word) {
     return DEFAULT;
 }
 
-function clipargs(keywords,argv) {
+function clipargs(keywords,argv=process.argv) {
     let keys = keywords.split(",");
     let result = {};
-    for(let key of keys) result[trim(key)] = "";
+    let positionalParams = [];
+    for(let key of keys) {
+        if (key[0] === '-') result[trim(key)] = "";
+        else positionalParams.push(key);
+    }
     result[DEFAULT]="";
-
     for(let arg of argv) {
         let words = split(arg);
         let key = isKey(keys, words[0]);
@@ -34,6 +37,11 @@ function clipargs(keywords,argv) {
         if (key === DEFAULT) result[key].push(words[0]);
         else result[key].push(words[1]);
         //console.log({arg,key,words,result});
+    }
+    let argc = 2;
+    for(let i=0; i<positionalParams.length; i++) {
+        if (argc >= result[DEFAULT].length) break;
+        result[positionalParams[i]] = result[DEFAULT][argc++];
     }
     // console.log({result});
     return result;

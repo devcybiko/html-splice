@@ -1,0 +1,361 @@
+<html lang="en">
+
+<head>
+    <link href="icon.png" rel="icon">
+    <link href="style.css" rel="stylesheet">
+    <title>Showing results for contents of text-input area - Nu Html Checker</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <div id="banner">
+        <h1 id="title"><a href="."><span>Nu Html Checker</span></a></h1>
+    </div>
+    <p class="disclaimer">This tool is an ongoing experiment in better HTML checking, and its behavior remains subject to change</p>
+    <h2 id="top">Showing results for contents of text-input area</h2>
+    <form method="get">
+        <fieldset>
+            <legend>Checker Input</legend>
+            <p class="checkboxes">Show <span class="checkboxgroup"><label title="Display the markup source of the input document." for="showsource"><input type="checkbox" name="showsource" id="showsource" value="yes">source</label><label title="Display an outline of the input document." for="showoutline"><input type="checkbox" name="showoutline" id="showoutline" value="yes">outline</label><label title="Display a report about the textual alternatives for images." for="showimagereport"><input type="checkbox" name="showimagereport" id="showimagereport" value="yes">image report</label></span><input id="show_options" type="button" value="Options…"><span class="extraoptions hidden"><span class="checkboxgroup"><label title="Check the content of all responses, including (non-200) error responses"><input type="checkbox" name="checkerrorpages" id="checkerrorpages" value="yes">check error pages</label></span><label id="user-agent-label" title="Specify the user-agent string to send in the document request">User-Agent <input name="useragent" list="useragents" value="Validator.nu/LV http://validator.w3.org/services"></label><datalist id="useragents"></datalist><label id="accept-language-label" title="Specify the accept-language header to send in the document request">Accept-Language <input id="acceptlanguage" name="acceptlanguage"></label></span></p>
+            <div id="inputregion"><label id="inputlabel" for="doc">Document URL:</label><input type="url" name="doc" id="doc" pattern="(?:(?:https?://.+)|(?:data:.+))?" title="Absolute URL (http, https or data only) of the document to be checked." tabindex="0" autofocus="autofocus"></div>
+            <p><input value="Check" type="submit" id="submit"></p>
+        </fieldset>
+    </form>
+    <script src="script.js"></script>
+    <script src="data:text/javascript,var%20_paq%3Dwindow._paq%7C%7C%5B%5D%3B_paq.push%28%5B%22trackPageView%22%5D%29%2C_paq.push%28%5B%22enableLinkTracking%22%5D%29%2Cfunction%28%29%7Bvar%20e%3D%22https%3A%2F%2Fwww.w3.org%2Fanalytics%2Fpiwik%2F%22%3B_paq.push%28%5B%22setTrackerUrl%22%2Ce%2B%22matomo.php%22%5D%29%2C_paq.push%28%5B%22setSiteId%22%2C%22444%22%5D%29%3Bvar%20a%3Ddocument%2Ct%3Da.createElement%28%22script%22%29%2Cp%3Da.getElementsByTagName%28%22script%22%29%5B0%5D%3Bt.type%3D%22text%2Fjavascript%22%2Ct.async%3D%210%2Ct.defer%3D%210%2Ct.src%3De%2B%22matomo.js%22%2Cp.parentNode.insertBefore%28t%2Cp%29%7D%28%29%3B"></script>
+    <div id="results">
+        <ol>
+            <li class="error">
+                <p><strong>Error</strong>: <span>Bogus doctype.</span></p>
+                <p class="location">At line <span class="last-line">1</span>, column <span class="last-col">16</span></p>
+                <p class="extract"><code>&lt;!DOCTYPE html <b>c</b>lass="foo"&gt;<span class="lf" title="Line break">↩</span>&lt;!</code></p>
+            </li>
+            <li class="error">
+                <p><strong>Error</strong>: <span>Quirky doctype. Expected <code>&lt;!DOCTYPE html&gt;</code>.</span></p>
+                <p class="location">From line <span class="first-line">1</span>, column <span class="first-col">1</span>; to line <span class="last-line">1</span>, column <span class="last-col">27</span></p>
+                <p class="extract"><code><b>&lt;!DOCTYPE html class="foo"&gt;</b><span class="lf" title="Line break">↩</span>&lt;!--[</code></p>
+            </li>
+            <li class="error">
+                <p><strong>Error</strong>: <span>Attribute <code>define</code> not allowed on element <a href="https://html.spec.whatwg.org/multipage/#the-head-element"><code>head</code></a> at this point.</span></p>
+                <p class="location">From line <span class="first-line">6</span>, column <span class="first-col">20</span>; to line <span class="last-line">8</span>, column <span class="last-col">29</span></p>
+                <p class="extract"><code>n head --&gt;<b><span class="lf" title="Line break">↩</span><span class="lf" title="Line break">↩</span>&lt;head define="$head(_title)"&gt;</b><span class="lf" title="Line break">↩</span> &lt;</code></p>
+                <dl>
+                    <dt>Attributes for element <a href="https://html.spec.whatwg.org/multipage/#the-head-element"><code>head</code></a>:</dt>
+                    <dd><a href="https://html.spec.whatwg.org/multipage/#global-attributes">Global attributes</a></dd>
+                </dl>
+            </li>
+            <li class="error">
+                <p><strong>Error</strong>: <span>Attribute <code>define</code> not allowed on element <a href="https://html.spec.whatwg.org/multipage/#the-script-element"><code>script</code></a> at this point.</span></p>
+                <p class="location">From line <span class="first-line">28</span>, column <span class="first-col">5</span>; to line <span class="last-line">28</span>, column <span class="last-col">31</span></p>
+                <p class="extract"><code>s --&gt;<span class="lf" title="Line break">↩</span> <b>&lt;script define="$user_css"&gt;</b>&lt;/scri</code></p>
+                <dl>
+                    <dt>Attributes for element <a href="https://html.spec.whatwg.org/multipage/#the-script-element"><code>script</code></a>:</dt>
+                    <dd><a href="https://html.spec.whatwg.org/multipage/#global-attributes">Global attributes</a></dd>
+                    <dd><code><a href="https://html.spec.whatwg.org/multipage/#attr-script-src">src</a></code> — Address of the resource</dd>
+                    <dd><code><a href="https://html.spec.whatwg.org/multipage/#attr-script-type">type</a></code> — Type of script</dd>
+                    <dd><code><a href="https://html.spec.whatwg.org/multipage/#attr-script-nomodule">nomodule</a></code> — Prevents execution in user agents that support <a href="https://html.spec.whatwg.org/multipage/#module-script">module scripts</a></dd>
+                    <dd><code><a href="https://html.spec.whatwg.org/multipage/#attr-script-async">async</a></code> — Execute script when available, without blocking while fetching</dd>
+                    <dd><code><a href="https://html.spec.whatwg.org/multipage/#attr-script-defer">defer</a></code> — Defer script execution</dd>
+                    <dd><code><a href="https://html.spec.whatwg.org/multipage/#attr-script-crossorigin">crossorigin</a></code> — How the element handles crossorigin requests</dd>
+                    <dd><code><a href="https://html.spec.whatwg.org/multipage/#attr-script-integrity">integrity</a></code> — Integrity metadata used in <cite>Subresource Integrity</cite> checks <a href="https://html.spec.whatwg.org/multipage/#refsSRI">[SRI]</a></dd>
+                    <dd><code><a href="https://html.spec.whatwg.org/multipage/#attr-script-referrerpolicy">referrerpolicy</a></code> — <a href="https://w3c.github.io/webappsec-referrer-policy/#referrer-policy">Referrer policy</a> for <a href="https://fetch.spec.whatwg.org/#concept-fetch">fetches</a> initiated by the element</dd>
+                </dl>
+            </li>
+            <li class="error">
+                <p><strong>Error</strong>: <span>Attribute <code>define</code> not allowed on element <a href="https://html.spec.whatwg.org/multipage/#the-body-element"><code>body</code></a> at this point.</span></p>
+                <p class="location">From line <span class="first-line">34</span>, column <span class="first-col">1</span>; to line <span class="last-line">34</span>, column <span class="last-col">21</span></p>
+                <p class="extract"><code>body --&gt;<span class="lf" title="Line break">↩</span><span class="lf" title="Line break">↩</span><b>&lt;body define="$body"&gt;</b><span class="lf" title="Line break">↩</span> &lt;</code></p>
+                <dl>
+                    <dt>Attributes for element <a href="https://html.spec.whatwg.org/multipage/#the-body-element"><code>body</code></a>:</dt>
+                    <dd><a href="https://html.spec.whatwg.org/multipage/#global-attributes">Global attributes</a></dd>
+                    <dd><code><a href="https://html.spec.whatwg.org/multipage/#handler-window-onafterprint">onafterprint</a></code></dd>
+                    <dd><code><a href="https://html.spec.whatwg.org/multipage/#handler-window-onbeforeprint">onbeforeprint</a></code></dd>
+                    <dd><code><a href="https://html.spec.whatwg.org/multipage/#handler-window-onbeforeunload">onbeforeunload</a></code></dd>
+                    <dd><code><a href="https://html.spec.whatwg.org/multipage/#handler-window-onhashchange">onhashchange</a></code></dd>
+                    <dd><code><a href="https://html.spec.whatwg.org/multipage/#handler-window-onlanguagechange">onlanguagechange</a></code></dd>
+                    <dd><code><a href="https://html.spec.whatwg.org/multipage/#handler-window-onmessage">onmessage</a></code></dd>
+                    <dd><code><a href="https://html.spec.whatwg.org/multipage/#handler-window-onmessageerror">onmessageerror</a></code></dd>
+                    <dd><code><a href="https://html.spec.whatwg.org/multipage/#handler-window-onoffline">onoffline</a></code></dd>
+                    <dd><code><a href="https://html.spec.whatwg.org/multipage/#handler-window-ononline">ononline</a></code></dd>
+                    <dd><code><a href="https://html.spec.whatwg.org/multipage/#handler-window-onpagehide">onpagehide</a></code></dd>
+                    <dd><code><a href="https://html.spec.whatwg.org/multipage/#handler-window-onpageshow">onpageshow</a></code></dd>
+                    <dd><code><a href="https://html.spec.whatwg.org/multipage/#handler-window-onpopstate">onpopstate</a></code></dd>
+                    <dd><code><a href="https://html.spec.whatwg.org/multipage/#handler-window-onrejectionhandled">onrejectionhandled</a></code></dd>
+                    <dd><code><a href="https://html.spec.whatwg.org/multipage/#handler-window-onstorage">onstorage</a></code></dd>
+                    <dd><code><a href="https://html.spec.whatwg.org/multipage/#handler-window-onunhandledrejection">onunhandledrejection</a></code></dd>
+                    <dd><code><a href="https://html.spec.whatwg.org/multipage/#handler-window-onunload">onunload</a></code></dd>
+                </dl>
+            </li>
+            <li class="error">
+                <p><strong>Error</strong>: <span>Attribute <code>define</code> not allowed on element <a href="https://html.spec.whatwg.org/multipage/#the-div-element"><code>div</code></a> at this point.</span></p>
+                <p class="location">From line <span class="first-line">37</span>, column <span class="first-col">5</span>; to line <span class="last-line">37</span>, column <span class="last-col">41</span></p>
+                <p class="extract"><code>r --&gt;<span class="lf" title="Line break">↩</span> <b>&lt;div class="loader" define="$loader"&gt;</b><span class="lf" title="Line break">↩</span> </code></p>
+                <dl>
+                    <dt>Attributes for element <a href="https://html.spec.whatwg.org/multipage/#the-div-element"><code>div</code></a>:</dt>
+                    <dd><a href="https://html.spec.whatwg.org/multipage/#global-attributes">Global attributes</a></dd>
+                </dl>
+            </li>
+            <li class="error">
+                <p><strong>Error</strong>: <span>Attribute <code>define</code> not allowed on element <a href="https://html.spec.whatwg.org/multipage/#the-nav-element"><code>nav</code></a> at this point.</span></p>
+                <p class="location">From line <span class="first-line">44</span>, column <span class="first-col">5</span>; to line <span class="last-line">44</span>, column <span class="last-col">42</span></p>
+                <p class="extract"><code>v --&gt;<span class="lf" title="Line break">↩</span> <b>&lt;nav id="main-nav" define="$main_nav"&gt;</b><span class="lf" title="Line break">↩</span> </code></p>
+                <dl>
+                    <dt>Attributes for element <a href="https://html.spec.whatwg.org/multipage/#the-nav-element"><code>nav</code></a>:</dt>
+                    <dd><a href="https://html.spec.whatwg.org/multipage/#global-attributes">Global attributes</a></dd>
+                </dl>
+            </li>
+            <li class="error">
+                <p><strong>Error</strong>: <span>Attribute <code>define</code> not allowed on element <a href="https://html.spec.whatwg.org/multipage/#the-li-element"><code>li</code></a> at this point.</span></p>
+                <p class="location">From line <span class="first-line">63</span>, column <span class="first-col">21</span>; to line <span class="last-line">63</span>, column <span class="last-col">57</span></p>
+                <p class="extract"><code> <b>&lt;li define="$menu_item(_href,_text)"&gt;</b>&lt;a hre</code></p>
+                <dl>
+                    <dt>Attributes for element <a href="https://html.spec.whatwg.org/multipage/#the-li-element"><code>li</code></a>:</dt>
+                    <dd><a href="https://html.spec.whatwg.org/multipage/#global-attributes">Global attributes</a></dd>
+                    <dd>If the element is not a child of an <code><a href="https://html.spec.whatwg.org/multipage/#the-ul-element">ul</a></code> or <code><a href="https://html.spec.whatwg.org/multipage/#the-menu-element">menu</a></code> element: <code><a href="https://html.spec.whatwg.org/multipage/#attr-li-value">value</a></code> — <a href="https://html.spec.whatwg.org/multipage/#ordinal-value">Ordinal value</a> of the list item</dd>
+                </dl>
+            </li>
+            <li class="error">
+                <p><strong>Error</strong>: <span>Attribute <code>define</code> not allowed on element <a href="https://html.spec.whatwg.org/multipage/#the-li-element"><code>li</code></a> at this point.</span></p>
+                <p class="location">From line <span class="first-line">65</span>, column <span class="first-col">21</span>; to line <span class="last-line">65</span>, column <span class="last-col">74</span></p>
+                <p class="extract"><code> <b>&lt;li define="$dropdown_menu(_title)" class="dropdown "&gt;</b>&lt;a hre</code></p>
+                <dl>
+                    <dt>Attributes for element <a href="https://html.spec.whatwg.org/multipage/#the-li-element"><code>li</code></a>:</dt>
+                    <dd><a href="https://html.spec.whatwg.org/multipage/#global-attributes">Global attributes</a></dd>
+                    <dd>If the element is not a child of an <code><a href="https://html.spec.whatwg.org/multipage/#the-ul-element">ul</a></code> or <code><a href="https://html.spec.whatwg.org/multipage/#the-menu-element">menu</a></code> element: <code><a href="https://html.spec.whatwg.org/multipage/#attr-li-value">value</a></code> — <a href="https://html.spec.whatwg.org/multipage/#ordinal-value">Ordinal value</a> of the list item</dd>
+                </dl>
+            </li>
+            <li class="error">
+                <p><strong>Error</strong>: <span>Attribute <code>define</code> not allowed on element <a href="https://html.spec.whatwg.org/multipage/#the-li-element"><code>li</code></a> at this point.</span></p>
+                <p class="location">From line <span class="first-line">69</span>, column <span class="first-col">29</span>; to line <span class="last-line">69</span>, column <span class="last-col">65</span></p>
+                <p class="extract"><code> <b>&lt;li define="$menu_item(_href,_text)"&gt;</b>&lt;a hre</code></p>
+                <dl>
+                    <dt>Attributes for element <a href="https://html.spec.whatwg.org/multipage/#the-li-element"><code>li</code></a>:</dt>
+                    <dd><a href="https://html.spec.whatwg.org/multipage/#global-attributes">Global attributes</a></dd>
+                    <dd>If the element is not a child of an <code><a href="https://html.spec.whatwg.org/multipage/#the-ul-element">ul</a></code> or <code><a href="https://html.spec.whatwg.org/multipage/#the-menu-element">menu</a></code> element: <code><a href="https://html.spec.whatwg.org/multipage/#attr-li-value">value</a></code> — <a href="https://html.spec.whatwg.org/multipage/#ordinal-value">Ordinal value</a> of the list item</dd>
+                </dl>
+            </li>
+            <li class="error">
+                <p><strong>Error</strong>: <span>Attribute <code>define</code> not allowed on element <a href="https://html.spec.whatwg.org/multipage/#the-li-element"><code>li</code></a> at this point.</span></p>
+                <p class="location">From line <span class="first-line">71</span>, column <span class="first-col">29</span>; to line <span class="last-line">71</span>, column <span class="last-col">65</span></p>
+                <p class="extract"><code> <b>&lt;li define="$menu_item(_href,_text)"&gt;</b>&lt;a hre</code></p>
+                <dl>
+                    <dt>Attributes for element <a href="https://html.spec.whatwg.org/multipage/#the-li-element"><code>li</code></a>:</dt>
+                    <dd><a href="https://html.spec.whatwg.org/multipage/#global-attributes">Global attributes</a></dd>
+                    <dd>If the element is not a child of an <code><a href="https://html.spec.whatwg.org/multipage/#the-ul-element">ul</a></code> or <code><a href="https://html.spec.whatwg.org/multipage/#the-menu-element">menu</a></code> element: <code><a href="https://html.spec.whatwg.org/multipage/#attr-li-value">value</a></code> — <a href="https://html.spec.whatwg.org/multipage/#ordinal-value">Ordinal value</a> of the list item</dd>
+                </dl>
+            </li>
+            <li class="error">
+                <p><strong>Error</strong>: <span>Attribute <code>define</code> not allowed on element <a href="https://html.spec.whatwg.org/multipage/#the-li-element"><code>li</code></a> at this point.</span></p>
+                <p class="location">From line <span class="first-line">83</span>, column <span class="first-col">21</span>; to line <span class="last-line">83</span>, column <span class="last-col">56</span></p>
+                <p class="extract"><code> <b>&lt;li define="$menu_search_hamburger"&gt;</b><span class="lf" title="Line break">↩</span> </code></p>
+                <dl>
+                    <dt>Attributes for element <a href="https://html.spec.whatwg.org/multipage/#the-li-element"><code>li</code></a>:</dt>
+                    <dd><a href="https://html.spec.whatwg.org/multipage/#global-attributes">Global attributes</a></dd>
+                    <dd>If the element is not a child of an <code><a href="https://html.spec.whatwg.org/multipage/#the-ul-element">ul</a></code> or <code><a href="https://html.spec.whatwg.org/multipage/#the-menu-element">menu</a></code> element: <code><a href="https://html.spec.whatwg.org/multipage/#attr-li-value">value</a></code> — <a href="https://html.spec.whatwg.org/multipage/#ordinal-value">Ordinal value</a> of the list item</dd>
+                </dl>
+            </li>
+            <li class="error">
+                <p><strong>Error</strong>: <span>Attribute <code>define</code> not allowed on element <a href="https://html.spec.whatwg.org/multipage/#the-div-element"><code>div</code></a> at this point.</span></p>
+                <p class="location">From line <span class="first-line">94</span>, column <span class="first-col">5</span>; to line <span class="last-line">94</span>, column <span class="last-col">75</span></p>
+                <p class="extract"><code>l --&gt;<span class="lf" title="Line break">↩</span> <b>&lt;div define="$banner_full" class="banner-container revolution no-tmrg"&gt;</b><span class="lf" title="Line break">↩</span> </code></p>
+                <dl>
+                    <dt>Attributes for element <a href="https://html.spec.whatwg.org/multipage/#the-div-element"><code>div</code></a>:</dt>
+                    <dd><a href="https://html.spec.whatwg.org/multipage/#global-attributes">Global attributes</a></dd>
+                </dl>
+            </li>
+            <li class="error">
+                <p><strong>Error</strong>: <span>Attribute <code>define</code> not allowed on element <a href="https://html.spec.whatwg.org/multipage/#the-div-element"><code>div</code></a> at this point.</span></p>
+                <p class="location">From line <span class="first-line">123</span>, column <span class="first-col">5</span>; to line <span class="last-line">123</span>, column <span class="last-col">78</span></p>
+                <p class="extract"><code>n --&gt;<span class="lf" title="Line break">↩</span> <b>&lt;div define="$testamonial_section(_heading,_subheading)" class="bg-white"&gt;</b><span class="lf" title="Line break">↩</span> </code></p>
+                <dl>
+                    <dt>Attributes for element <a href="https://html.spec.whatwg.org/multipage/#the-div-element"><code>div</code></a>:</dt>
+                    <dd><a href="https://html.spec.whatwg.org/multipage/#global-attributes">Global attributes</a></dd>
+                </dl>
+            </li>
+            <li class="error">
+                <p><strong>Error</strong>: <span>Attribute <code>define</code> not allowed on element <a href="https://html.spec.whatwg.org/multipage/#the-div-element"><code>div</code></a> at this point.</span></p>
+                <p class="location">From line <span class="first-line">135</span>, column <span class="first-col">25</span>; to line <span class="last-line">135</span>, column <span class="last-col">94</span></p>
+                <p class="extract"><code> <b>&lt;div define="$testamonial_card(_src,_name,_title,_text)" class="item"&gt;</b><span class="lf" title="Line break">↩</span> </code></p>
+                <dl>
+                    <dt>Attributes for element <a href="https://html.spec.whatwg.org/multipage/#the-div-element"><code>div</code></a>:</dt>
+                    <dd><a href="https://html.spec.whatwg.org/multipage/#global-attributes">Global attributes</a></dd>
+                </dl>
+            </li>
+            <li class="error">
+                <p><strong>Error</strong>: <span>Attribute <code>define</code> not allowed on element <a href="https://html.spec.whatwg.org/multipage/#the-div-element"><code>div</code></a> at this point.</span></p>
+                <p class="location">From line <span class="first-line">143</span>, column <span class="first-col">25</span>; to line <span class="last-line">143</span>, column <span class="last-col">94</span></p>
+                <p class="extract"><code> <b>&lt;div define="$testamonial_card(_src,_name,_title,_text)" class="item"&gt;</b><span class="lf" title="Line break">↩</span> </code></p>
+                <dl>
+                    <dt>Attributes for element <a href="https://html.spec.whatwg.org/multipage/#the-div-element"><code>div</code></a>:</dt>
+                    <dd><a href="https://html.spec.whatwg.org/multipage/#global-attributes">Global attributes</a></dd>
+                </dl>
+            </li>
+            <li class="error">
+                <p><strong>Error</strong>: <span>Attribute <code>define</code> not allowed on element <a href="https://html.spec.whatwg.org/multipage/#the-div-element"><code>div</code></a> at this point.</span></p>
+                <p class="location">From line <span class="first-line">151</span>, column <span class="first-col">25</span>; to line <span class="last-line">151</span>, column <span class="last-col">94</span></p>
+                <p class="extract"><code> <b>&lt;div define="$testamonial_card(_src,_name,_title,_text)" class="item"&gt;</b><span class="lf" title="Line break">↩</span> </code></p>
+                <dl>
+                    <dt>Attributes for element <a href="https://html.spec.whatwg.org/multipage/#the-div-element"><code>div</code></a>:</dt>
+                    <dd><a href="https://html.spec.whatwg.org/multipage/#global-attributes">Global attributes</a></dd>
+                </dl>
+            </li>
+            <li class="error">
+                <p><strong>Error</strong>: <span>Attribute <code>define</code> not allowed on element <a href="https://html.spec.whatwg.org/multipage/#the-div-element"><code>div</code></a> at this point.</span></p>
+                <p class="location">From line <span class="first-line">159</span>, column <span class="first-col">25</span>; to line <span class="last-line">159</span>, column <span class="last-col">94</span></p>
+                <p class="extract"><code> <b>&lt;div define="$testamonial_card(_src,_name,_title,_text)" class="item"&gt;</b><span class="lf" title="Line break">↩</span> </code></p>
+                <dl>
+                    <dt>Attributes for element <a href="https://html.spec.whatwg.org/multipage/#the-div-element"><code>div</code></a>:</dt>
+                    <dd><a href="https://html.spec.whatwg.org/multipage/#global-attributes">Global attributes</a></dd>
+                </dl>
+            </li>
+            <li class="error">
+                <p><strong>Error</strong>: <span>Attribute <code>define</code> not allowed on element <a href="https://html.spec.whatwg.org/multipage/#the-div-element"><code>div</code></a> at this point.</span></p>
+                <p class="location">From line <span class="first-line">167</span>, column <span class="first-col">25</span>; to line <span class="last-line">167</span>, column <span class="last-col">94</span></p>
+                <p class="extract"><code> <b>&lt;div define="$testamonial_card(_src,_name,_title,_text)" class="item"&gt;</b><span class="lf" title="Line break">↩</span> </code></p>
+                <dl>
+                    <dt>Attributes for element <a href="https://html.spec.whatwg.org/multipage/#the-div-element"><code>div</code></a>:</dt>
+                    <dd><a href="https://html.spec.whatwg.org/multipage/#global-attributes">Global attributes</a></dd>
+                </dl>
+            </li>
+            <li class="error">
+                <p><strong>Error</strong>: <span>Attribute <code>define</code> not allowed on element <a href="https://html.spec.whatwg.org/multipage/#the-div-element"><code>div</code></a> at this point.</span></p>
+                <p class="location">From line <span class="first-line">175</span>, column <span class="first-col">25</span>; to line <span class="last-line">175</span>, column <span class="last-col">94</span></p>
+                <p class="extract"><code> <b>&lt;div define="$testamonial_card(_src,_name,_title,_text)" class="item"&gt;</b><span class="lf" title="Line break">↩</span> </code></p>
+                <dl>
+                    <dt>Attributes for element <a href="https://html.spec.whatwg.org/multipage/#the-div-element"><code>div</code></a>:</dt>
+                    <dd><a href="https://html.spec.whatwg.org/multipage/#global-attributes">Global attributes</a></dd>
+                </dl>
+            </li>
+            <li class="error">
+                <p><strong>Error</strong>: <span>Attribute <code>define</code> not allowed on element <a href="https://html.spec.whatwg.org/multipage/#the-div-element"><code>div</code></a> at this point.</span></p>
+                <p class="location">From line <span class="first-line">183</span>, column <span class="first-col">25</span>; to line <span class="last-line">183</span>, column <span class="last-col">94</span></p>
+                <p class="extract"><code> <b>&lt;div define="$testamonial_card(_src,_name,_title,_text)" class="item"&gt;</b><span class="lf" title="Line break">↩</span> </code></p>
+                <dl>
+                    <dt>Attributes for element <a href="https://html.spec.whatwg.org/multipage/#the-div-element"><code>div</code></a>:</dt>
+                    <dd><a href="https://html.spec.whatwg.org/multipage/#global-attributes">Global attributes</a></dd>
+                </dl>
+            </li>
+            <li class="error">
+                <p><strong>Error</strong>: <span>Attribute <code>define</code> not allowed on element <a href="https://html.spec.whatwg.org/multipage/#the-footer-element"><code>footer</code></a> at this point.</span></p>
+                <p class="location">From line <span class="first-line">210</span>, column <span class="first-col">5</span>; to line <span class="last-line">210</span>, column <span class="last-col">59</span></p>
+                <p class="extract"><code>n --&gt;<span class="lf" title="Line break">↩</span> <b>&lt;footer define="$footer_section" class="footer b-pad0"&gt;</b><span class="lf" title="Line break">↩</span> </code></p>
+                <dl>
+                    <dt>Attributes for element <a href="https://html.spec.whatwg.org/multipage/#the-footer-element"><code>footer</code></a>:</dt>
+                    <dd><a href="https://html.spec.whatwg.org/multipage/#global-attributes">Global attributes</a></dd>
+                </dl>
+            </li>
+            <li class="error">
+                <p><strong>Error</strong>: <span>Attribute <code>define</code> not allowed on element <a href="https://html.spec.whatwg.org/multipage/#the-div-element"><code>div</code></a> at this point.</span></p>
+                <p class="location">From line <span class="first-line">215</span>, column <span class="first-col">17</span>; to line <span class="last-line">215</span>, column <span class="last-col">111</span></p>
+                <p class="extract"><code> <b>&lt;div define="$footer_address(_heading,_text,_phone,_email,_address,_website)" class="col-sm-4"&gt;</b><span class="lf" title="Line break">↩</span> </code></p>
+                <dl>
+                    <dt>Attributes for element <a href="https://html.spec.whatwg.org/multipage/#the-div-element"><code>div</code></a>:</dt>
+                    <dd><a href="https://html.spec.whatwg.org/multipage/#global-attributes">Global attributes</a></dd>
+                </dl>
+            </li>
+            <li class="error">
+                <p><strong>Error</strong>: <span>Attribute <code>define</code> not allowed on element <a href="https://html.spec.whatwg.org/multipage/#the-div-element"><code>div</code></a> at this point.</span></p>
+                <p class="location">From line <span class="first-line">226</span>, column <span class="first-col">17</span>; to line <span class="last-line">226</span>, column <span class="last-col">80</span></p>
+                <p class="extract"><code> <b>&lt;div define="$footer_blogs(_heading)" class="col-sm-4 t-pad50 "&gt;</b><span class="lf" title="Line break">↩</span> </code></p>
+                <dl>
+                    <dt>Attributes for element <a href="https://html.spec.whatwg.org/multipage/#the-div-element"><code>div</code></a>:</dt>
+                    <dd><a href="https://html.spec.whatwg.org/multipage/#global-attributes">Global attributes</a></dd>
+                </dl>
+            </li>
+            <li class="error">
+                <p><strong>Error</strong>: <span>Attribute <code>define</code> not allowed on element <a href="https://html.spec.whatwg.org/multipage/#the-p-element"><code>p</code></a> at this point.</span></p>
+                <p class="location">From line <span class="first-line">230</span>, column <span class="first-col">25</span>; to line <span class="last-line">230</span>, column <span class="last-col">69</span></p>
+                <p class="extract"><code> <b>&lt;p define="$footer_blog(_title,_href,_date)"&gt;</b>&lt;a hre</code></p>
+                <dl>
+                    <dt>Attributes for element <a href="https://html.spec.whatwg.org/multipage/#the-p-element"><code>p</code></a>:</dt>
+                    <dd><a href="https://html.spec.whatwg.org/multipage/#global-attributes">Global attributes</a></dd>
+                </dl>
+            </li>
+            <li class="error">
+                <p><strong>Error</strong>: <span>Attribute <code>define</code> not allowed on element <a href="https://html.spec.whatwg.org/multipage/#the-p-element"><code>p</code></a> at this point.</span></p>
+                <p class="location">From line <span class="first-line">232</span>, column <span class="first-col">25</span>; to line <span class="last-line">232</span>, column <span class="last-col">69</span></p>
+                <p class="extract"><code> <b>&lt;p define="$footer_blog(_title,_href,_date)"&gt;</b>&lt;a hre</code></p>
+                <dl>
+                    <dt>Attributes for element <a href="https://html.spec.whatwg.org/multipage/#the-p-element"><code>p</code></a>:</dt>
+                    <dd><a href="https://html.spec.whatwg.org/multipage/#global-attributes">Global attributes</a></dd>
+                </dl>
+            </li>
+            <li class="error">
+                <p><strong>Error</strong>: <span>Attribute <code>define</code> not allowed on element <a href="https://html.spec.whatwg.org/multipage/#the-p-element"><code>p</code></a> at this point.</span></p>
+                <p class="location">From line <span class="first-line">234</span>, column <span class="first-col">25</span>; to line <span class="last-line">234</span>, column <span class="last-col">69</span></p>
+                <p class="extract"><code> <b>&lt;p define="$footer_blog(_title,_href,_date)"&gt;</b>&lt;a hre</code></p>
+                <dl>
+                    <dt>Attributes for element <a href="https://html.spec.whatwg.org/multipage/#the-p-element"><code>p</code></a>:</dt>
+                    <dd><a href="https://html.spec.whatwg.org/multipage/#global-attributes">Global attributes</a></dd>
+                </dl>
+            </li>
+            <li class="error">
+                <p><strong>Error</strong>: <span>Attribute <code>define</code> not allowed on element <a href="https://html.spec.whatwg.org/multipage/#the-div-element"><code>div</code></a> at this point.</span></p>
+                <p class="location">From line <span class="first-line">240</span>, column <span class="first-col">17</span>; to line <span class="last-line">240</span>, column <span class="last-col">90</span></p>
+                <p class="extract"><code> <b>&lt;div define="$footer_subscribe(_heading,_text)" class="col-sm-4 t-pad50 "&gt;</b><span class="lf" title="Line break">↩</span> </code></p>
+                <dl>
+                    <dt>Attributes for element <a href="https://html.spec.whatwg.org/multipage/#the-div-element"><code>div</code></a>:</dt>
+                    <dd><a href="https://html.spec.whatwg.org/multipage/#global-attributes">Global attributes</a></dd>
+                </dl>
+            </li>
+            <li class="error">
+                <p><strong>Error</strong>: <span>Attribute <code>define</code> not allowed on element <a href="https://html.spec.whatwg.org/multipage/#the-form-element"><code>form</code></a> at this point.</span></p>
+                <p class="location">From line <span class="first-line">246</span>, column <span class="first-col">25</span>; to line <span class="last-line">246</span>, column <span class="last-col">212</span></p>
+                <p class="extract"><code> <b>&lt;form define="$footer_form(_url,_button_text)" method="post" id="contact-form" action="https://agilefrontiers.us2.list-manage.com/subscribe/post?u=bad506cec3607863b4da379d4&amp;id=2237eaec71"&gt;</b> &lt;inpu</code></p>
+                <dl>
+                    <dt>Attributes for element <a href="https://html.spec.whatwg.org/multipage/#the-form-element"><code>form</code></a>:</dt>
+                    <dd><a href="https://html.spec.whatwg.org/multipage/#global-attributes">Global attributes</a></dd>
+                    <dd><code><a href="https://html.spec.whatwg.org/multipage/#attr-form-accept-charset">accept-charset</a></code> — Character encodings to use for <a href="https://html.spec.whatwg.org/multipage/#form-submission-2">form submission</a></dd>
+                    <dd><code><a href="https://html.spec.whatwg.org/multipage/#attr-fs-action">action</a></code> — <a href="https://url.spec.whatwg.org/#concept-url">URL</a> to use for <a href="https://html.spec.whatwg.org/multipage/#form-submission-2">form submission</a></dd>
+                    <dd><code><a href="https://html.spec.whatwg.org/multipage/#attr-form-autocomplete">autocomplete</a></code> — Default setting for autofill feature for controls in the form</dd>
+                    <dd><code><a href="https://html.spec.whatwg.org/multipage/#attr-fs-enctype">enctype</a></code> — Entry list encoding type to use for <a href="https://html.spec.whatwg.org/multipage/#form-submission-2">form submission</a></dd>
+                    <dd><code><a href="https://html.spec.whatwg.org/multipage/#attr-fs-method">method</a></code> — Variant to use for <a href="https://html.spec.whatwg.org/multipage/#form-submission-2">form submission</a></dd>
+                    <dd><code><a href="https://html.spec.whatwg.org/multipage/#attr-form-name">name</a></code> — Name of form to use in the <code><a href="https://html.spec.whatwg.org/multipage/#dom-document-forms">document.forms</a></code> API</dd>
+                    <dd><code><a href="https://html.spec.whatwg.org/multipage/#attr-fs-novalidate">novalidate</a></code> — Bypass form control validation for <a href="https://html.spec.whatwg.org/multipage/#form-submission-2">form submission</a></dd>
+                    <dd><code><a href="https://html.spec.whatwg.org/multipage/#attr-fs-target">target</a></code> — <a href="https://html.spec.whatwg.org/multipage/#browsing-context">Browsing context</a> for <a href="https://html.spec.whatwg.org/multipage/#form-submission-2">form submission</a></dd>
+                    <dd><code><a href="https://html.spec.whatwg.org/multipage/#attr-form-rel">rel</a></code></dd>
+                </dl>
+            </li>
+            <li class="error">
+                <p><strong>Error</strong>: <span>Attribute <code>define</code> not allowed on element <a href="https://html.spec.whatwg.org/multipage/#the-p-element"><code>p</code></a> at this point.</span></p>
+                <p class="location">From line <span class="first-line">250</span>, column <span class="first-col">25</span>; to line <span class="last-line">250</span>, column <span class="last-col">92</span></p>
+                <p class="extract"><code> <b>&lt;p define="$footer_privacy(_text,_href,_button_text)" class="small"&gt;</b>* We d</code></p>
+                <dl>
+                    <dt>Attributes for element <a href="https://html.spec.whatwg.org/multipage/#the-p-element"><code>p</code></a>:</dt>
+                    <dd><a href="https://html.spec.whatwg.org/multipage/#global-attributes">Global attributes</a></dd>
+                </dl>
+            </li>
+            <li class="error">
+                <p><strong>Error</strong>: <span>Attribute <code>define</code> not allowed on element <a href="https://html.spec.whatwg.org/multipage/#the-div-element"><code>div</code></a> at this point.</span></p>
+                <p class="location">From line <span class="first-line">257</span>, column <span class="first-col">5</span>; to line <span class="last-line">257</span>, column <span class="last-col">62</span></p>
+                <p class="extract"><code>l --&gt;<span class="lf" title="Line break">↩</span> <b>&lt;div define="$footer_social(_copyright)" class="bg-white"&gt;</b><span class="lf" title="Line break">↩</span> </code></p>
+                <dl>
+                    <dt>Attributes for element <a href="https://html.spec.whatwg.org/multipage/#the-div-element"><code>div</code></a>:</dt>
+                    <dd><a href="https://html.spec.whatwg.org/multipage/#global-attributes">Global attributes</a></dd>
+                </dl>
+            </li>
+            <li class="error">
+                <p><strong>Error</strong>: <span>Attribute <code>define</code> not allowed on element <a href="https://html.spec.whatwg.org/multipage/#the-li-element"><code>li</code></a> at this point.</span></p>
+                <p class="location">From line <span class="first-line">267</span>, column <span class="first-col">25</span>; to line <span class="last-line">267</span>, column <span class="last-col">75</span></p>
+                <p class="extract"><code> <b>&lt;li define="$footer_icon(_href,_alt,_title,_icon)"&gt;</b>&lt;a hre</code></p>
+                <dl>
+                    <dt>Attributes for element <a href="https://html.spec.whatwg.org/multipage/#the-li-element"><code>li</code></a>:</dt>
+                    <dd><a href="https://html.spec.whatwg.org/multipage/#global-attributes">Global attributes</a></dd>
+                    <dd>If the element is not a child of an <code><a href="https://html.spec.whatwg.org/multipage/#the-ul-element">ul</a></code> or <code><a href="https://html.spec.whatwg.org/multipage/#the-menu-element">menu</a></code> element: <code><a href="https://html.spec.whatwg.org/multipage/#attr-li-value">value</a></code> — <a href="https://html.spec.whatwg.org/multipage/#ordinal-value">Ordinal value</a> of the list item</dd>
+                </dl>
+            </li>
+        </ol>
+        <p class="failure">There were errors.</p>
+        <div class="details">
+            <p class="msgschema">Used the schema for HTML + SVG 1.1 + MathML 3.0 + RDFa 1.1.</p>
+            <p class="msgmediatype">Used the HTML parser.
+        </div>
+        <p class="stats">Total execution time 43 milliseconds.</p>
+    </div>
+    <hr>
+    <div id="about">
+        <p><a href="about.html">About this checker</a> • <a href="about.html#issues">Report an issue</a> • <span class="version">Version: 20.11.5</span></p>
+    </div>
+</body>
+
+</html>
